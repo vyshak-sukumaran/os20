@@ -1,0 +1,105 @@
+.container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -17%);
+    width: 580px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    visibility: 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.view {
+    visibility: 1;
+    opacity: 1;
+    z-index: 999;
+}
+
+.hide {
+    visibility: 0;
+    opacity: 0;
+    z-index: -999;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    color: white;
+    padding: 0.8rem 0.5rem;
+}
+.apps {
+    flex-grow: 1;
+    padding-right: 0.8rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.18);
+}
+.search {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 7px;
+    padding: 0.4rem;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+}
+.allApps {
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto;
+    align-items: center;
+    row-gap: 8px;
+}
+.appSingle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    border-radius: 7px;
+    padding: 7px;
+}
+.appSingle span {
+    font-size: 0.65rem;
+    font-family: "Sora", sans-serif;
+}
+.appSingle svg {
+    width: 2rem;
+    height: 2rem;
+}
+.appSingle:hover {
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.349);
+}
+
+.recent {
+    width: 220px;
+    padding-left: 0.8rem;
+}
+.header {
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
+}
+.recentApps {
+    padding-top: 1.4rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    align-items: center;
+    row-gap: 8px;  
+}
+
+.buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    z-index: 20;
+}

@@ -1,0 +1,70 @@
+.window {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    min-width: 300px;
+    max-width: 1366px;
+    width: 600px;
+    min-height: 400px;
+    height: 300px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    overflow: hidden;
+    resize: both;
+    z-index: 600;
+}
+.window[open] {
+    animation: fadeIn 400ms forwards;
+}
+.window[closing] {
+    animation: fadeOut 400ms forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.window::-webkit-resizer {
+    background-color: transparent;
+}
+
+
+.topBar {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+.windowName {
+    font-size: 0.8rem;
+    font-family: "Sora", sans-serif;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+.windowName svg {
+    height: 1.35rem;
+    width: 1.35rem;
+}
+.windowButtons {
+    display: flex;
+    align-items: center;
+}

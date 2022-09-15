@@ -1,0 +1,96 @@
+.container {
+    width: 100%;
+    height: calc(100% - 2.5rem);
+    box-sizing: border-box;
+    padding: 0.2rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.topBar {
+    list-style: none;
+    display: flex;
+    gap: 2px;
+    height: 1.5rem;
+}
+.topBar li {
+    font-size: 0.85rem;
+    font-family: "Roboto", sans-serif;
+    padding: 2px 6px;
+    transition: all 80ms;
+}
+.topBar li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.addressBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    overflow: hidden;
+    gap: 5px;
+    flex-shrink: 0;
+}
+.addressIcons {
+    display: flex;
+    align-items: center;
+}
+.addressWrap {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    flex-grow: 1;
+    height: 100%;
+    border-radius: 4px;
+    box-sizing: border-box;
+    padding: 0 0.4rem;
+}
+.address {
+    line-height: 2rem;
+    font-size: 0.8rem;
+    font-family: "Sora", sans-serif;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.body {
+    flex-grow: 1;
+    display: flex;
+}
+.sideNav {
+    width: 135px;
+    border-right:  1px solid rgba(255, 255, 255, 0.3);
+    flex-shrink: 0;
+}
+.sideNavItems {
+    list-style: none;
+    padding-top: 0.5rem;
+}
+.sideNavItems li {
+    height: 2rem;
+    font-size: 0.83rem;
+    font-family: "Sora", sans-serif;
+    transition: all 80ms;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 0.3rem;
+}
+.sideNavItems li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+.sideNavItems svg {
+    height: 1.35rem;
+    width: 1.35rem;
+}
+.sideNavActive {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 10px;
+    align-content: flex-start;
+}
