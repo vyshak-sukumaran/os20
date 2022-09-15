@@ -47,7 +47,7 @@ export const IconButton = styled.button`
 
 
 export const ShortCut = styled.button`
-    width: ${props => props.large ? "90px" : "90px"};
+    width: ${props => props.large ? "90px" : "70px"};
     height: ${props => props.large ? "90px" : "70px"};
     display: flex;
     flex-direction: column;

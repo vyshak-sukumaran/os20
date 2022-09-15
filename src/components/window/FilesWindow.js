@@ -1,16 +1,16 @@
 import React from 'react'
 import s from './FilesWindow.module.css'
-import { ReactComponent as ForwardIcon } from '../../assets/arrowforward.svg'
-import { ReactComponent as BackwardIcon } from '../../assets/arrowbackward.svg'
-import { ReactComponent as HomeIcon } from '../../assets/home.svg'
-import { ReactComponent as HomeFolderIcon } from '../../assets/folderhome.svg'
-import { ReactComponent as UserFolderIcon } from '../../assets/folderuser.svg'
-import { ReactComponent as DownloadFolderIcon } from '../../assets/folderdownload.svg'
-import { ReactComponent as MusicFolderIcon } from '../../assets/foldermusic.svg'
-import { ReactComponent as ImageFolderIcon } from '../../assets/folderimage.svg'
-import { ReactComponent as VideoFolderIcon } from '../../assets/foldervideo.svg'
-import { ReactComponent as TrashIcon } from '../../assets/trash.svg'
-import { ReactComponent as DesktopIcon } from '../../assets/desktop.svg'
+import { ReactComponent as ForwardIcon } from '../../assets/arrows/forward.svg'
+import { ReactComponent as BackwardIcon } from '../../assets/arrows/back.svg'
+import { ReactComponent as HomeIcon } from '../../assets/utils/home.svg'
+import { ReactComponent as HomeFolderIcon } from '../../assets/window/folderhome.svg'
+import { ReactComponent as UserFolderIcon } from '../../assets/window/folderuser.svg'
+import { ReactComponent as DownloadFolderIcon } from '../../assets/window/folderdownload.svg'
+import { ReactComponent as MusicFolderIcon } from '../../assets/window/foldermusic.svg'
+import { ReactComponent as ImageFolderIcon } from '../../assets/window/folderimage.svg'
+import { ReactComponent as VideoFolderIcon } from '../../assets/window/foldervideo.svg'
+import { ReactComponent as TrashIcon } from '../../assets/window/trash.svg'
+import { ReactComponent as DesktopIcon } from '../../assets/window/desktop.svg'
 import { IconButton, ShortCut } from '../../styles/Buttons'
 
 const FilesWindow = () => {
@@ -40,7 +40,7 @@ const FilesWindow = () => {
                 </div>
             </div>
             <section className={s.body}>
-                <div className={s.sideNav}>
+                <div className={s.sideNav} id="scrollStyled">
                     <ul className={s.sideNavItems}>
                         <li className={s.sideNavActive}>
                             <HomeFolderIcon />
@@ -76,7 +76,7 @@ const FilesWindow = () => {
                         </li>
                     </ul>
                 </div>
-                <div className={s.main}>
+                <div className={s.main} id="scrollStyled">
 
                     <ShortCut large>
                         <DesktopIcon />

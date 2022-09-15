@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import styles from './Shortcuts.module.css'
-import { ReactComponent as HomeFolderIcon } from '../../assets/folderhome.svg'
-import { ReactComponent as TrashIcon } from '../../assets/trash.svg'
-import { ReactComponent as ImageIcon } from '../../assets/image.svg'
+import { ReactComponent as HomeFolderIcon } from '../../assets/window/folderhome.svg'
+import { ReactComponent as TrashIcon } from '../../assets/window/trash.svg'
+import { ReactComponent as ImageIcon } from '../../assets/window/image.svg'
 import ShortcutSingle from './ShortcutSingle'
 
 const props = [

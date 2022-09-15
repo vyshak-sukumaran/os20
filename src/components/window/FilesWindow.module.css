@@ -3,8 +3,6 @@
     height: calc(100% - 2.5rem);
     box-sizing: border-box;
     padding: 0.2rem 0.5rem;
-    display: flex;
-    flex-direction: column;
 }
 .topBar {
     list-style: none;
@@ -54,13 +52,15 @@
 }
 
 .body {
-    flex-grow: 1;
+    height: calc(100% - 4rem);
     display: flex;
 }
 .sideNav {
     width: 135px;
     border-right:  1px solid rgba(255, 255, 255, 0.3);
     flex-shrink: 0;
+    height: 100%;
+    overflow-y: auto;
 }
 .sideNavItems {
     list-style: none;
@@ -93,4 +93,6 @@
     padding: 1rem;
     gap: 10px;
     align-content: flex-start;
+    height: 100%;
+    overflow-y: auto;
 }

@@ -1,15 +1,14 @@
 import React, { useState } from 'react'
 import styles from './Home.module.css'
-import BackgroundImage from '../../assets/darkbg.png'
-import { ReactComponent as StartIcon } from '../../assets/start.svg'
-import { ReactComponent as FilesIcon } from '../../assets/folder.svg'
-import { ReactComponent as ChromeIcon } from '../../assets/chrome.svg'
-import { ReactComponent as CodeIcon } from '../../assets/code.svg'
-import { ReactComponent as CmdIcon } from '../../assets/cmd.svg'
-import { ReactComponent as StoreIcon } from '../../assets/store.svg'
-import { ReactComponent as WifiIcon } from '../../assets/wifi.svg'
-import { ReactComponent as MutedIcon } from '../../assets/muted.svg'
-import { ReactComponent as KeyboardIcon } from '../../assets/keyboard.svg'
+import { ReactComponent as StartIcon } from '../../assets/utils/start.svg'
+import { ReactComponent as FilesIcon } from '../../assets/window/folder.svg'
+import { ReactComponent as ChromeIcon } from '../../assets/apps/chrome.svg'
+import { ReactComponent as CodeIcon } from '../../assets/apps/code.svg'
+import { ReactComponent as CmdIcon } from '../../assets/apps/cmd.svg'
+import { ReactComponent as StoreIcon } from '../../assets/apps/store.svg'
+import { ReactComponent as WifiIcon } from '../../assets/utils/wifi.svg'
+import { ReactComponent as MutedIcon } from '../../assets/utils/muted.svg'
+import { ReactComponent as KeyboardIcon } from '../../assets/utils/keyboard.svg'
 import Start from './Start'
 import Shortcuts from './Shortcuts'
 
@@ -19,7 +18,7 @@ const Home = () => {
     <div
       className={styles.container}
       style={{
-        backgroundImage: `url(${BackgroundImage})`,
+        backgroundImage: `url(/homebg.png)`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"

@@ -1,9 +1,9 @@
 import React, { useRef, useEffect } from "react";
 import { IconButton } from "../../styles/Buttons";
 import styles from "./Window.module.css";
-import { ReactComponent as CloseIcon } from '../../assets/close.svg'
-import { ReactComponent as UpArrowIcon } from '../../assets/uparrow.svg'
-import { ReactComponent as DownArrowIcon } from '../../assets/downarrow.svg'
+import { ReactComponent as CloseIcon } from '../../assets/utils/close.svg'
+import { ReactComponent as UpArrowIcon } from '../../assets/arrows/upward.svg'
+import { ReactComponent as DownArrowIcon } from '../../assets/arrows/downward.svg'
 
 const Window = ({ children, isOpen, handleClose, name, icon }) => {
     const modalRef = useRef(null)

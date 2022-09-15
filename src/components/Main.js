@@ -5,7 +5,6 @@ import './Main.css'
 
 const Main = () => {
   const [toggled, setToggled] = useState(false)
-  console.log(toggled);
   return (
     <div className='Main'>
         {

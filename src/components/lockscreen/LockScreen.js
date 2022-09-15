@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from './LockScreen.module.css'
-import Background from '../../assets/lockpaper.jpg'
-import Avatar from '../../assets/lockbg.png'
-import { ReactComponent as LockIcon } from '../../assets/lock.svg'
-import { ReactComponent as KeyboardIcon } from '../../assets/keyboard.svg'
-import { ReactComponent as WifiIcon } from '../../assets/wifi.svg'
-import { ReactComponent as BatteryIcon } from '../../assets/battery.svg'
-import { ReactComponent as ArrowIcon } from '../../assets/arrowdown.svg'
-import { ReactComponent as BackIcon } from '../../assets/back.svg'
+import { ReactComponent as LockIcon } from '../../assets/utils/lock.svg'
+import { ReactComponent as KeyboardIcon } from '../../assets/utils/keyboard.svg'
+import { ReactComponent as WifiIcon } from '../../assets/utils/wifi.svg'
+import { ReactComponent as BatteryIcon } from '../../assets/utils/battery.svg'
+import { ReactComponent as ArrowIcon } from '../../assets/arrows/arrowdown.svg'
+import { ReactComponent as BackIcon } from '../../assets/arrows/back.svg'
 import { GradientButton, IconButton } from '../../styles/Buttons'
 
 const LockScreen = ({setToggled}) => {
@@ -17,17 +15,14 @@ const LockScreen = ({setToggled}) => {
   let [end, setEnd] = useState(0)
 
   const handleLogin = (e) => {
-    console.log("xlslgllkeghnleit");
     setToggled(true)
   }
 
   const handleGoBack = (e) => {
-    console.log("go back");
     setStart(0)
     setEnd(0)
   }
 
-  console.log(start, end);
   useEffect(() => {
     const elmt = lockRef.current
     if (!elmt) return
@@ -43,7 +38,6 @@ const LockScreen = ({setToggled}) => {
       elmt.style.cursor = "default"
       setPressed(false)
       setEnd(event.clientY)
-      console.log(event);
     }
 
     elmt.addEventListener("mouseenter", () => {
@@ -58,12 +52,13 @@ const LockScreen = ({setToggled}) => {
       elmt.removeEventListener("mousedown", mouseDown)
       elmt.removeEventListener("mouseup", mouseUp)
     }
+    // eslint-disable-next-line
   }, [])
   return (
     <div
       className={styles.container}
       style={{
-        backgroundImage: `url(${Background})`,
+        backgroundImage: `url(/lockpaper.jpg)`,
         backgroundPosition: "center",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"
@@ -110,14 +105,14 @@ const LockScreen = ({setToggled}) => {
           <div
             className={styles.loginAvatar}
             style={{
-              backgroundImage: `url(${Avatar})`,
+              backgroundImage: `url(/sunflower.jpg)`,
               backgroundPosition: "center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat"
             }}
           >hi
           </div>
-          <div className={styles.loginText}>Welcome back Erik!</div>
+          <div className={styles.loginText}>Welcome back User!</div>
           <div className={styles.loginButton}>
             <GradientButton
               type='button'
