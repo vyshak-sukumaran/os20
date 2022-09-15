@@ -12,4 +12,4 @@ Static and simple.
 
 ### Not responsive
 
-Though OS can be run on selected resolutions.
+Though OS can be ran on selected resolutions.
