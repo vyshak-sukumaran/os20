@@ -8,8 +8,10 @@ import { ReactComponent as ArrowIcon } from '../../assets/arrows/arrowdown.svg'
 import { ReactComponent as BackIcon } from '../../assets/arrows/back.svg'
 import { GradientButton, IconButton } from '../../styles/Buttons'
 
-const LockScreen = ({setToggled}) => {
+const LockScreen = ({setToggled, toggled}) => {
   const lockRef = useRef(null)
+  const mainRef = useRef(null)
+
   let [pressed, setPressed] = useState(true)
   let [start, setStart] = useState(0)
   let [end, setEnd] = useState(0)
@@ -22,6 +24,26 @@ const LockScreen = ({setToggled}) => {
     setStart(0)
     setEnd(0)
   }
+
+  // need to make this a hook idiot
+  useEffect(() => {
+    const mainElem = mainRef.current
+
+    mainElem.style.display = "block"
+    setStart(0)
+    setEnd(0)
+
+    if (!toggled) return
+    const handleAnimationEnd = (e) => {
+      mainElem.style.display = "none"
+    }
+
+    mainElem.addEventListener("animationend", handleAnimationEnd)
+
+    return () => {
+      mainElem.removeEventListener("animationend", handleAnimationEnd)
+    }
+  }, [toggled])
 
   useEffect(() => {
     const elmt = lockRef.current
@@ -54,9 +76,11 @@ const LockScreen = ({setToggled}) => {
     }
     // eslint-disable-next-line
   }, [])
+
   return (
     <div
-      className={styles.container}
+      ref={mainRef}
+      className={`${styles.container} ${toggled && styles.hideLock}`}
       style={{
         backgroundImage: `url(/lockpaper.jpg)`,
         backgroundPosition: "center",
