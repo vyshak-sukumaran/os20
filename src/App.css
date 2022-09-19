@@ -7,6 +7,13 @@
     overflow: hidden;
 }
 
+.max-container {
+    max-width: 1366px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
 #scrollStyled::-webkit-scrollbar {
     width: 5px;
 }

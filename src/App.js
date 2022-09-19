@@ -22,18 +22,18 @@ function App() {
   return (
     <div className="App">
       {
-        (width >=1100 && width <=1366) ?
-        <>
-          <Boot booted={booted} />
-          <Main booted={booted} />
-        </>
-        :
-        <div className="soft-limiter">
-          <div className="limit-text">
-            <h1>Screen size not supported!</h1>
-            <p>Try changing your screen width.</p>
+        width >= 1080 ?
+          <div className='max-container'>
+            <Boot booted={booted} />
+            <Main booted={booted} />
+          </div>
+          :
+          <div className="soft-limiter">
+            <div className="limit-text">
+              <h1>Screen size not supported!</h1>
+              <p>Minimum screen size need to be 1080 pixels.</p>
             </div>
-        </div>
+          </div>
       }
 
     </div>
